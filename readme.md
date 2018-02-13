@@ -6,3 +6,6 @@ Users can either search for the best calorie/protein/etc per dollar value across
 
 #Users
 This can be implemented on a global scale, so long as vendors can update prices per region.
+
+#Impact
+Users can use this app to make smarter choices when going out to eat, improving their spending habits and food choices.

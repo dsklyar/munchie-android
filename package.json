@@ -1,0 +1,27 @@
+{
+  "name": "munchieserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "logs/*"
+    ],
+    "delay": "2500"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.13.1",
+    "htmlparser": "^1.7.7",
+    "jsdom": "^11.6.2",
+    "mongoose": "^5.0.6",
+    "nodemon": "^1.15.0",
+    "phantom": "^4.0.12"
+  }
+}

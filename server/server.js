@@ -4,8 +4,10 @@ const express = require('express'),
   expressGraphQL = require('express-graphql'),
   mongoose = require('mongoose'),
   app = express(),
-  schema = require('./schema/schema'),
-  scraper = require('./scraper/index');
+  schema = require('./schema/schema');
+
+const scraperFunc = require('./scraper/index'),
+      tacoBellConfig = require('./scraper/configs/taco_bell');
 
 const MONGO_URI = 'mongodb://SummerInLandunish:soire@ds046267.mlab.com:46267/lake';
 // Mongoose's built in promise library is deprecated, replace it with ES2015 Promise
@@ -25,6 +27,6 @@ app.use('/graphql', expressGraphQL({
 }));
 
 //setInterval(scraper,1500); // Loop it
-setTimeout(scraper,1500);
+setTimeout(func => {scraperFunc(tacoBellConfig)},1500); // Run once per start 1500 is ~1.5 seconds
 
 module.exports = app;
